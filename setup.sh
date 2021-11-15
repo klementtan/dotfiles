@@ -1,4 +1,4 @@
 #!/bin/sh
 
-echo "Setting up zsh"
-./scripts/zsh.sh
+echo "Setting up MacOS dependencies"
+./scripts/macos.sh
