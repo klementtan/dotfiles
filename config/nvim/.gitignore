@@ -1,0 +1,6 @@
+plugged/*
+!plugged/.keep
+env/*
+!env/.keep
+
+

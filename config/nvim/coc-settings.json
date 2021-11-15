@@ -1,0 +1,61 @@
+{
+  "languageserver": {
+    "go": {
+      "command": "gopls",
+      "rootPatterns": [
+        "go.mod"
+      ],
+      "trace.server": "verbose",
+      "filetypes": [
+        "go"
+      ]
+    },
+    "bash": {
+      "command": "bash-language-server",
+      "args": [
+        "start"
+      ],
+      "filetypes": [
+        "sh"
+      ]
+    },
+    "dockerfile": {
+      "command": "docker-langerver",
+      "filetypes": [
+        "dockerfile"
+      ],
+      "args": [
+        "--stdio"
+      ]
+    },
+    "dart": {
+      "command": "dart",
+      "args": [
+        "/Users/tandeningklement/Desktop/codes/Dependency/flutter/bin/cache/dart-sdk/bin/snapshots/analysis_server.dart.snapshot",
+        "--lsp",
+        "--client-id",
+        "vim",
+        "--client-version",
+        "coc.nvim"
+      ],
+      "filetypes": [
+        "dart"
+      ],
+      "trace.server": "verbose"
+    }
+  },
+  "clangd.semanticHighlighting": true,
+  "coc.preferences.extensionUpdateCheck": "daily",
+  "codeLens.enable": true,
+  "java.referencesCodeLens.enabled": true,
+  "java.codeGeneration.generateComments": true,
+  "java.signatureHelp.enabled": true,
+  "java.implementationsCodeLens.enabled": true,
+  "java.format.enabled": true,
+  "java.format.settings.profile":"~/.config/coc/extensions/node_modules/redhat.java/eclipse-formatter.xml",
+  "java.format.comments.enabled": true,
+  "java.format.onType.enabled": true,
+  "java.home": "/Users/tandeningklement/Library/Java/JavaVirtualMachines/openjdk-16.0.2/Contents/Home",
+  "java.format.settings.url": "/Users/tandeningklement/.config/coc/extensions/node_modules/redhat.java/eclipse-formatter.xml",
+  "coc.source.vimtex.enable": true
+}
