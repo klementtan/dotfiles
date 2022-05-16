@@ -158,8 +158,11 @@ Plug 'honza/vim-snippets'
 Plug 'neomake/neomake'
 
 
+
 " Markdown
 Plug 'JamshedVesuna/vim-markdown-preview'
+
+
 
 call plug#end()
 
@@ -237,7 +240,7 @@ nmap <leader>rn <Plug>(coc-rename)
 vmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 " Show all diagnostics
-"nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 " Manage extensions
 "nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
 " Show commands
@@ -298,7 +301,8 @@ call neomake#configure#automake('w')
 
 let g:vimtex_view_method = "skim"
 let g:vimtex_view_general_viewer = '/Applications/Skim.app/Contents/SharedSupport/displayline'
-let g:vimtex_view_general_options = '-r @line @pdf @tex'
+let g:vimtex_view_general_options = '--shell-escape -r @line @pdf @tex'
+let g:tex_flavor = 'latex'
 
 augroup vimtex_mac
     autocmd!
@@ -427,8 +431,6 @@ nnoremap <silent> <Leader>b :Buffers!<CR>
 "nnoremap <Leader>h :<C-f>?
 " Start fuzzy search for command history, requires vim-fzf plugin.
 autocmd FileType c,cpp,h nnoremap <silent> <Leader>h :<C-u>CocCommand clangd.switchSourceHeader<CR>
-
-autocmd FileType c,cpp,h nnoremap <silent> <Leader>h :<C-u>CocCommand clangd.switchSourceHeader<CR>
 autocmd FileType c,cpp,h nnoremap <silent> <Leader>f :<C-u>FormatCode<CR>
 
 autocmd FileType tex  nnoremap <silent> <C-p> :<C-u>VimtexCompile<CR>
@@ -444,6 +446,10 @@ nnoremap <silent> <Leader>z :Files!<CR>
 
 " Start fuzzy search for files not excluded by .gitignore, requires vim-fzf plugin.
 nnoremap <silent> <Leader>g :GFiles!<CR>
+
+
+nnoremap <silent> <Leader>ds :Gdiffsplit<CR>
+nnoremap <silent> <Leader>dt :Git difftool<CR>
 
 " Start fuzzy search lines in the current buffer, requires vim-fzf plugin.
 nnoremap <silent> // :BLines!<CR>
@@ -474,6 +480,8 @@ let g:undotree_WindowLayout = 1
 let g:undotree_ShortIndicators = 0
 
 let g:undotree_SplitWidth = 60
+
+let g:python3_host_prog = "/Library/Developer/CommandLineTools/usr/bin/python3" 
 
 " -------------------------------------------------------------------------------------------------
 " fzf.vim settings

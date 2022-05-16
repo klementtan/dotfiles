@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+. "$HOME/.fig/shell/zshrc.pre.zsh"
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -138,6 +140,7 @@ alias cd_icloud="cd /Users/tandeningklement/Library/Mobile\ Documents/com~apple~
 
 # Exporting PATH
 export PATH="$HOME/.pyenv/bin:$PATH"
+export PATH="$PATH:/Users/tandeningklement/Library/Python/3.8/bin"
 export PATH="/usr/local/bin:$PATH"
 export PATH=${PATH}:/usr/local/mysql/bin/
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
@@ -146,50 +149,35 @@ export PATH=$PATH:$HOME/go/bin
 export PATH=$PATH:/usr/local/go/bin
 export PATH="$PATH:/Users/tandeningklement/Desktop/codes/Dependency/flutter/bin"
 export PATH=$PATH:"/Users/tandeningklement/Desktop/codes/Dependency/depot_tools"
-export PATH=$PATH:"/usr/local/opt/llvm/bin"
 export PATH=$PATH:"/opt/openmpi/bin"
-export PATH=$PATH:"~/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0"
+export PATH=$PATH:"$HOME/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0"
+export PATH="/Library/Developer/CommandLineTools/usr/bin":$PATH
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+export PATH="/usr/local/Cellar/gcc@6/6.5.0_7/bin:$PATH"
 
 # Export CPP flags
-export LDFLAGS="-L/usr/local/lib -L/usr/local/opt/llvm/lib"
-export CPPFLAGS="-I/usr/local/include -I/usr/local/opt/llvm/include"
-export CPATH=/usr/local/include
+export LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
+# export CPATH="/usr/local/include:$CPATH"
+# export CPATH="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include:$CPATH"
+# export CPATH="/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include:$CPATH"
+# XCBASE=`xcrun --show-sdk-path`
+# export CPLUS_INCLUDE_PATH="$XCBASE/usr/include:$CPLUS_INCLUDE_PATH"
+export CPPFLAGS="-I/usr/local/opt/llvm/include"
 export LIBRARY_PATH=/usr/local/lib
 export LD_LIBRARY_PATH=/usr/local/lib
 # Env variables
 export JAVA_HOME="/Users/tandeningklement/Library/Java/JavaVirtualMachines/openjdk-16.0.2/Contents/Home"
+#export	CPATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include
+
+  
 
 # Evals
-eval "$(jenv init -)"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 eval $(thefuck --alias)
 
-
-# Google SDK
-if [ -f '/Users/tandeningklement/Desktop/codes/Dependency/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tandeningklement/Desktop/codes/Dependency/google-cloud-sdk/path.zsh.inc'; fi
-if [ -f '/Users/tandeningklement/Desktop/codes/Dependency/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tandeningklement/Desktop/codes/Dependency/google-cloud-sdk/completion.zsh.inc'; fi
-[[ /Users/tandeningklement/Desktop/codes/Dependency/google-cloud-sdk/bin/kubectl ]] && source <(kubectl completion zsh)
-
-# Conda
-# # >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/tandeningklement/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/tandeningklement/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/tandeningklement/opt/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/tandeningklement/opt/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
 [[ -s /Users/tandeningklement/.autojump/etc/profile.d/autojump.sh ]] && source /Users/tandeningklement/.autojump/etc/profile.d/autojump.sh
 autoload -U compinit && compinit -u
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Env Variables
-## Clangd
+# Fig post block. Keep at the bottom of this file.
+. "$HOME/.fig/shell/zshrc.post.zsh"

@@ -44,7 +44,8 @@
       "trace.server": "verbose"
     }
   },
-  "clangd.semanticHighlighting": true,
+  "clangd.checkUpdates": true,
+  "clangd.arguments": ["--all-scopes-completion", "--background-index", "--cross-file-rename", "--header-insertion=iwyu", "--suggest-missing-includes", "-log=verbose", "-pretty", "--query-driver=/**/*"],
   "coc.preferences.extensionUpdateCheck": "daily",
   "codeLens.enable": true,
   "java.referencesCodeLens.enabled": true,
@@ -57,5 +58,11 @@
   "java.format.onType.enabled": true,
   "java.home": "/Users/tandeningklement/Library/Java/JavaVirtualMachines/openjdk-16.0.2/Contents/Home",
   "java.format.settings.url": "/Users/tandeningklement/.config/coc/extensions/node_modules/redhat.java/eclipse-formatter.xml",
-  "coc.source.vimtex.enable": true
+  "coc.source.vimtex.enable": true,
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/14.0.3/clangd_14.0.3/bin/clangd",
+  "coc.source.vimtex.filetypes": [
+    "tex",
+    "plaintex",
+    "latex"
+  ]
 }
