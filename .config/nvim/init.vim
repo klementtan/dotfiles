@@ -162,7 +162,12 @@ Plug 'neomake/neomake'
 " Markdown
 Plug 'JamshedVesuna/vim-markdown-preview'
 
+" Harpoon
+Plug 'nvim-lua/plenary.nvim' " don't forget to add this one if you don't have it yet!
+Plug 'ThePrimeagen/harpoon'
 
+" oscyank
+Plug 'ojroques/vim-oscyank', {'branch': 'main'}
 
 call plug#end()
 
@@ -413,7 +418,8 @@ nnoremap <Leader>q :tabclose<CR>
 nnoremap <leader>yf :let @* = expand("%:p")<cr>
 
 " Copy selected to clipboard
-noremap <Leader>y "*y
+vnoremap <leader>y :OSCYank<CR>
+
 noremap <Leader>Y "+y
 
 " Open file browser
@@ -488,6 +494,13 @@ let g:python3_host_prog = "/Library/Developer/CommandLineTools/usr/bin/python3"
 " -------------------------------------------------------------------------------------------------
 " Open preview window to the top.
 let g:fzf_preview_window = 'up:77%'
+
+" -------------------------------------------------------------------------------------------------
+" harpoon
+" -------------------------------------------------------------------------------------------------
+nnoremap <silent><leader>a :lua require("harpoon.mark").add_file()<CR>
+nnoremap <silent><C-e> :lua require("harpoon.ui").toggle_quick_menu()<CR>
+nnoremap <silent><leader>tc :lua require("harpoon.cmd-ui").toggle_quick_menu()<CR>
 
 
 " -----------------------------------------------------------------------------
