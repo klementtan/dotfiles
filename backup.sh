@@ -9,4 +9,7 @@ mkdir -p .config/yabai &&
 cp -r ~/.config/yabai/yabairc .config/yabai/yabairc &&
 mkdir -p .config/skhd &&
 cp -r ~/.config/skhd .config/skhd/skhdrc
+mkdir -p .config/alacritty &&
+  cp -r ~/.config/alacritty/alacritty.yml .config/alacritty
+
 

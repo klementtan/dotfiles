@@ -608,7 +608,7 @@ nnoremap <silent> <Leader>t :TSEnable highlight<CR>:set foldmethod=expr \| :set 
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 " Enable mouse (e.g., resizing splits).
-set mouse=a
+set mouse=
 
 " Ignore minimised javascript files for various wildcard operations.
 set wildignore+=*.js.min

@@ -1,5 +1,9 @@
 {
   "languageserver": {
+    "lua": {
+      "command": "lua-lsp",
+      "filetypes": ["lua"]
+    },
     "go": {
       "command": "gopls",
       "rootPatterns": [

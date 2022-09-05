@@ -122,6 +122,8 @@ cmd + shift - h : /Users/tandeningklement/.scripts/SwitchSpaces/yabai-switch-to-
 ## float / unfloat window and center on screen
 alt - return : yabai -m window --toggle float; yabai -m window --grid 20:20:1:1:18:18 ## toggle sticky alt - s : yabai -m window --toggle sticky ## toggle sticky, float and resize to picture-in-picture size alt - p : yabai -m window --toggle sticky;\ yabai -m window --grid 5:5:4:0:1:1 ## change layout of desktop ctrl + alt - a : yabai -m space --layout bsp ctrl + alt - d : yabai -m space --layout float
 
+cmd + alt - return : yabai -m window --toggle float; yabai -m window --toggle zoom-fullscreen ## toggle sticky alt - s : yabai -m window --toggle sticky ## toggle sticky, float and resize to picture-in-picture size alt - p : yabai -m window --toggle sticky;\ yabai -m window --grid 5:5:4:0:1:1 ## change layout of desktop ctrl + alt - a : yabai -m space --layout bsp ctrl + alt - d : yabai -m space --layout float
+
 ## toggle window split type
 #alt - e : yabai -m window --toggle split
 
