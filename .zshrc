@@ -153,17 +153,17 @@ export PATH=$PATH:"/Users/tandeningklement/Desktop/codes/Dependency/depot_tools"
 export PATH=$PATH:"/opt/openmpi/bin"
 export PATH=$PATH:"$HOME/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0"
 export PATH="/Library/Developer/CommandLineTools/usr/bin":$PATH
-export PATH="/usr/local/opt/llvm/bin:$PATH"
-export PATH="/usr/local/Cellar/gcc@6/6.5.0_7/bin:$PATH"
+#export PATH="/usr/local/opt/llvm/bin:$PATH"
+#export PATH="/usr/local/Cellar/gcc@6/6.5.0_7/bin:$PATH"
 
 # Export CPP flags
-export LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
+#export LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
 # export CPATH="/usr/local/include:$CPATH"
 # export CPATH="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include:$CPATH"
 # export CPATH="/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include:$CPATH"
 # XCBASE=`xcrun --show-sdk-path`
 # export CPLUS_INCLUDE_PATH="$XCBASE/usr/include:$CPLUS_INCLUDE_PATH"
-export CPPFLAGS="-I/usr/local/opt/llvm/include"
+#export CPPFLAGS="-I/usr/local/opt/llvm/include"
 export LIBRARY_PATH=/usr/local/lib
 export LD_LIBRARY_PATH=/usr/local/lib
 # Env variables
