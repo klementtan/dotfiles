@@ -7,7 +7,9 @@ require("nvim-tree").setup({
         mappings = {
             list = {
                 { key = { "l", "o", "<2-LeftMouse>" }, action = "edit" },
-                { key = { "h", "o", "<2-LeftMouse>" }, action = "edit" }
+                { key = { "h", "<BS>" }, action = "close_node" },
+                { key = { "<CR>" }, action = "cd" },
+
             }
         }
     },

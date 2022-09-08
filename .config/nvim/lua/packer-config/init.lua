@@ -3,11 +3,9 @@ return require("packer").startup(function()
 
 	-->
 	use("Pocco81/TrueZen.nvim")
-	use("kyazdani42/nvim-web-devicons") --> enable icons
 	use("norcalli/nvim-colorizer.lua")
 	use("nvim-lualine/lualine.nvim") --> a statusline written in lua
 	use("kyazdani42/nvim-tree.lua") --> file explorer
-	use("lukas-reineke/indent-blankline.nvim") --> indent guides for neovim
 	use("akinsho/toggleterm.nvim")
 	use("nvim-lua/plenary.nvim")
 	use("nvim-telescope/telescope.nvim") --> Find, Filter, Preview, Pick. All lua, all the time.
@@ -21,11 +19,11 @@ return require("packer").startup(function()
 	-- use("jubnzv/mdeval.nvim") --> evaluates code blocks inside markdown, vimwiki, orgmode.nvim and norg docs
 	use("startup-nvim/startup.nvim")
 	use("lervag/vimtex")
+    use("ojroques/vim-oscyank")
 	-- use("vigoux/LanguageTool.nvim")
 	use("mfussenegger/nvim-dap")
 	--> colorschemes
-	use("EdenEast/nightfox.nvim") --> nightfox colorsceme for neovim
-	use("sainnhe/gruvbox-material")
+    use("sainnhe/gruvbox-material")
 
 	--> treesitter & treesitter modules/plugins
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }) --> treesitter

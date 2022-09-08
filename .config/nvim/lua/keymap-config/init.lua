@@ -3,7 +3,8 @@ local opts = { noremap = true, silent = true }
 
 vim.g.mapleader = " " -- leader key
 
---> Goyo <--
+--> OSCYank <--
+map("v", "<leader>y", ":OSCYank<CR>", opts)
 
 --> Generic <--
 map("n", "<C-h>", "<C-W>h", opts)
@@ -14,11 +15,24 @@ map("n", "<leader><CR>", ":nohlsearch<CR>", opts)
 
 
 --> nvim tree mappings <--
-map("n", "<leader>e", ":NvimTreeFindFile<CR>", opts)
+map("n", "<leader>e", ":NvimTreeFindFileToggle<CR>", opts)
 --> telescope mappings <--
-map("n", "<leader>g", ":Telescope find_files<cr>", opts)
+map("n", "<leader>g", ":Telescope git_files<cr>", opts)
+map("n", "<leader>z", ":Telescope find_files<cr>", opts)
 map("n", "??", ":Telescope live_grep<cr>", opts)
 map("n", "<leader>b", ":Telescope buffers<cr>", opts)
+map("n", "<leader>c", ":Telescope commands<cr>", opts)
+map("n", "<leader>j", ":Telescope jumplist<cr>", opts)
+--> --> telescope mappings for lsp <-- <--
+map("n", "gd", ":Telescope lsp_definitions<cr>", opts)
+map("n", "gr", ":Telescope lsp_references<cr>", opts)
+map("n", "<leader>o", ":Telescope lsp_document_symbols<cr>", opts)
+
+--> clangd lsp <--
+vim.cmd([[
+    autocmd FileType c,cpp,h nnoremap <silent> <Leader>h :ClangdSwitchSourceHeader<CR>
+]])
+
 --> barbar mappings <--
 map("n", "<A-,>", ":BufferPrevious<CR>", opts)
 map("n", "<A-.>", ":BufferNext<CR>", opts)

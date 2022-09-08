@@ -14,29 +14,36 @@ set.termguicolors = true
 set.showmode = false
 set.splitbelow = true
 set.splitright = true
-set.wrap = false
+set.wrap = true
 set.breakindent = true
 set.scrolloff = 5
 set.fileencoding = "utf-8"
 set.conceallevel = 2
 
 set.relativenumber = true
+set.number = true
 set.cursorline = true
 set.wildmenu = true
 set.completeopt = "menuone,noselect"
 
 set.hidden = true
-set.mouse = "a"
 
 set.fillchars = "eob: "
 
 set.swapfile = false
+set.showbreak = "↪"
 
+-- From https://github.com/sainnhe/gruvbox-material/issues/5#issuecomment-716179571
 vim.cmd([[
+    syntax on
+    set termguicolors
     colorscheme gruvbox-material
+    hi Comment term=bold cterm=NONE ctermfg=245 gui=NONE guifg=#928374
 ]])
 
-vim.g.gruvbox_material_enable_italic = 1
+vim.cmd([[
+    set mouse=
+]])
 
 vim.notify = require("notify")
 
