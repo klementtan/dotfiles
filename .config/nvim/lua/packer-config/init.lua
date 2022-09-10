@@ -10,7 +10,6 @@ return require("packer").startup(function()
 	use("nvim-lua/plenary.nvim")
 	use("nvim-telescope/telescope.nvim") --> Find, Filter, Preview, Pick. All lua, all the time.
 	use("numToStr/Comment.nvim")
-	use("ggandor/lightspeed.nvim") --> motion plugin with incremental input processing, allowing for unparalleled speed with near-zero cognitive effort
 	use("rcarriga/nvim-notify")
 	use("windwp/nvim-autopairs")
 	-- use("sunjon/shade.nvim") --> dim inactive windows
