@@ -33,6 +33,14 @@ vim.cmd([[
     autocmd FileType c,cpp,h nnoremap <silent> <Leader>h :ClangdSwitchSourceHeader<CR>
 ]])
 
+--> gitsigns <--
+map("n", "<leader>gd", ":Gitsigns diffthis<cr>", opts)
+map("n", "<leader>gn", ":Gitsigns next_hunk<cr>", opts)
+map("n", "<leader>gp", ":Gitsigns prev_hunk<cr>", opts)
+map("n", "<leader>gs", ":Gitsigns preview_hunk<cr>", opts)
+map("n", "<leader>gb", ":Gitsigns blame_line<cr>", opts)
+map("n", "<leader>gR", ":Gitsigns reset_hunk<cr>", opts)
+
 --> barbar mappings <--
 map("n", "<A-,>", ":BufferPrevious<CR>", opts)
 map("n", "<A-.>", ":BufferNext<CR>", opts)

@@ -24,6 +24,12 @@ return require("packer").startup(function()
 	--> colorschemes
     use("sainnhe/gruvbox-material")
 
+    --> git
+    use {
+  'lewis6991/gitsigns.nvim',
+      -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
+    }
+
 	--> treesitter & treesitter modules/plugins
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }) --> treesitter
 	use("nvim-treesitter/nvim-treesitter-textobjects") --> textobjects
